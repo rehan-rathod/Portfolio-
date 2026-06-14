@@ -212,24 +212,17 @@ export function Hero() {
             />
           ))}
 
-          {/* Centre avatar/icon placeholder */}
+          {/* Centre avatar image */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-primary/20 group cursor-pointer"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full overflow-hidden border border-white/10 shadow-lg shadow-primary/20"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.4, type: 'spring', stiffness: 200, damping: 18 }}
           >
-            {/* Cyber Neon Avatar */}
-            <img
-              src="/avatar-neon.png"
-              alt="Rehan Rathod Avatar"
-              className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
-            />
-            {/* Original Photo */}
             <img
               src="/avatar-original.jpg"
               alt="Rehan Rathod"
-              className="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className="w-full h-full object-cover"
             />
           </motion.div>
 
