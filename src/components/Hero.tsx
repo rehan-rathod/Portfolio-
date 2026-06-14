@@ -214,13 +214,23 @@ export function Hero() {
 
           {/* Centre avatar/icon placeholder */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-2xl flex items-center justify-center text-3xl font-black font-heading border border-white/10"
-            style={{ background: 'linear-gradient(135deg, #005bea22, #c471ed22)', backdropFilter: 'blur(12px)' }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-2xl overflow-hidden border border-white/10 shadow-lg shadow-primary/20 group cursor-pointer"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.4, type: 'spring', stiffness: 200, damping: 18 }}
           >
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg,#00c6fb,#c471ed)' }}>RR</span>
+            {/* Cyber Neon Avatar */}
+            <img
+              src="/avatar-neon.png"
+              alt="Rehan Rathod Avatar"
+              className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
+            />
+            {/* Original Photo */}
+            <img
+              src="/avatar-original.jpg"
+              alt="Rehan Rathod"
+              className="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
           </motion.div>
 
           {/* Floating tech badges */}
